@@ -43,7 +43,7 @@ export default function AboutPage() {
             Built for<br />Transformation
           </h1>
           <p className="text-gray-400 text-xl max-w-2xl">
-            For 15 years, Biretica has been the trusted partner for organisations navigating complex digital change.
+            For 15 years, Bireca has been the trusted partner for organisations navigating complex digital change.
             We are strategists, technologists, and delivery experts — all in one firm.
           </p>
         </div>

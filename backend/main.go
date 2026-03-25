@@ -1,8 +1,8 @@
 package main
 
 import (
-	"biretica/backend/handlers"
-	"biretica/backend/middleware"
+	"bireca/backend/handlers"
+	"bireca/backend/middleware"
 	"log"
 	"net/http"
 	"os"
@@ -22,6 +22,6 @@ func main() {
 	}
 
 	handler := middleware.CORS(mux)
-	log.Printf("Biretica API listening on :%s", port)
+	log.Printf("Bireca API listening on :%s", port)
 	log.Fatal(http.ListenAndServe(":"+port, handler))
 }

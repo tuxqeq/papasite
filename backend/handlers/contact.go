@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"biretica/backend/models"
+	"bireca/backend/models"
 	"encoding/json"
 	"log"
 	"net/http"

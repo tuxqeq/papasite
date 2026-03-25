@@ -4,9 +4,9 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
-  title: 'Biretica — Transform. Innovate. Grow.',
+  title: 'Bireca — Transform. Innovate. Grow.',
   description:
-    'Biretica is a global digital transformation consultancy helping organizations navigate complexity, accelerate innovation, and achieve sustainable growth.',
+    'Bireca is a global digital transformation consultancy helping organizations navigate complexity, accelerate innovation, and achieve sustainable growth.',
   keywords: ['digital transformation', 'consulting', 'cloud', 'AI', 'cybersecurity', 'strategy'],
 }
 

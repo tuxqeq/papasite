@@ -52,7 +52,7 @@ export default function Footer() {
           {/* Brand col */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <Image src="/logo.svg" alt="Biretica" width={120} height={30} />
+              <Image src="/logo.svg" alt="Bireca" width={120} height={30} />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
               Transform. Innovate. Grow.<br />
@@ -85,7 +85,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-brand-gray-mid pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} Biretica. All rights reserved.
+            © {new Date().getFullYear()} Bireca. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-brand-purple transition-colors duration-200">

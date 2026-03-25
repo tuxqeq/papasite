@@ -200,9 +200,9 @@ export default function ContactPage() {
           </div>
 
           <div className="border-t border-brand-gray-mid pt-6 flex flex-col gap-4">
-            <a href="mailto:hello@biretica.com" className="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors duration-200">
+            <a href="mailto:hello@bireca.com" className="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors duration-200">
               <Mail className="w-5 h-5 text-brand-purple" />
-              hello@biretica.com
+              hello@bireca.com
             </a>
             <a href="tel:+48221234567" className="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors duration-200">
               <Phone className="w-5 h-5 text-brand-purple" />

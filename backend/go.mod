@@ -1,3 +1,3 @@
-module biretica/backend
+module bireca/backend
 
 go 1.24
