@@ -53,7 +53,7 @@ export default async function InsightDetailPage({ params }: { params: { slug: st
             The landscape of digital transformation continues to evolve at an unprecedented pace. Organisations that fail to adapt risk falling behind competitors who have embraced the latest methodologies and technologies.
           </p>
           <p>
-            At Biretica, we work alongside leadership teams to design and execute transformation strategies that deliver measurable outcomes — not just technology deployments, but genuine business change that sticks.
+            At Bireca, we work alongside leadership teams to design and execute transformation strategies that deliver measurable outcomes — not just technology deployments, but genuine business change that sticks.
           </p>
           <p>
             Our approach combines deep domain expertise with a pragmatic, human-centred delivery model. We believe that successful transformation requires equal attention to technology, process, and people.

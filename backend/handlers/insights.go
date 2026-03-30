@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"biretica/backend/data"
-	"biretica/backend/models"
+	"bireca/backend/data"
+	"bireca/backend/models"
 	"encoding/json"
 	"net/http"
 	"strconv"

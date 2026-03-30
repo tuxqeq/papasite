@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            <Image src="/logo.svg" alt="Biretica" width={140} height={35} priority />
+            <Image src="/logo.svg" alt="Bireca" width={140} height={35} priority />
           </Link>
 
           {/* Desktop nav */}

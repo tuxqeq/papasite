@@ -1,6 +1,6 @@
 package data
 
-import "biretica/backend/models"
+import "bireca/backend/models"
 
 var Insights = []models.Insight{
 	{
