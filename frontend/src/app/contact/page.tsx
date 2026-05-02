@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { submitContact } from '@/lib/api'
 import type { ContactFormPayload } from '@/types'
-import { Mail, Phone, MapPin, Loader2, CheckCircle2 } from 'lucide-react'
+import { Mail, Phone, Loader2, CheckCircle2 } from 'lucide-react'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
@@ -178,28 +178,7 @@ export default function ContactPage() {
 
         {/* Contact info */}
         <div className="flex flex-col gap-8">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-purple mb-6">
-              Our Offices
-            </p>
-            <div className="flex flex-col gap-6">
-              {[
-                { city: 'Warsaw', address: 'ul. Marszałkowska 111\n00-102 Warsaw, Poland' },
-                { city: 'London', address: '30 St Mary Axe\nEC3A 8BF London, UK' },
-                { city: 'Frankfurt', address: 'Neue Mainzer Str. 75\n60311 Frankfurt, Germany' },
-              ].map((office) => (
-                <div key={office.city} className="flex gap-3">
-                  <MapPin className="w-5 h-5 text-brand-purple shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-bold text-white text-sm">{office.city}</p>
-                    <p className="text-gray-400 text-sm whitespace-pre-line">{office.address}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="border-t border-brand-gray-mid pt-6 flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <a href="mailto:hello@bireca.com" className="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors duration-200">
               <Mail className="w-5 h-5 text-brand-purple" />
               hello@bireca.com

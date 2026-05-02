@@ -6,30 +6,30 @@ const columns = [
   {
     heading: 'Services',
     links: [
-      { label: 'Digital Strategy', href: '/services#digital-strategy' },
-      { label: 'Cloud Solutions', href: '/services#cloud-solutions' },
-      { label: 'AI & Data Analytics', href: '/services#ai-data' },
-      { label: 'Cybersecurity', href: '/services#cybersecurity' },
-      { label: 'Business Consulting', href: '/services#business-consulting' },
-      { label: 'Tech Modernization', href: '/services#tech-modernization' },
+      { label: 'Executive Intelligence', href: '/services#executive-intelligence' },
+      { label: 'Sales Performance', href: '/services#sales-performance' },
+      { label: 'Marketing Intelligence', href: '/services#marketing-intelligence' },
+      { label: 'Operational Excellence', href: '/services#operational-excellence' },
+      { label: 'Supply Chain Visibility', href: '/services#supply-chain-visibility' },
+      { label: 'Risk Intelligence', href: '/services#risk-intelligence' },
     ],
   },
   {
     heading: 'Company',
     links: [
       { label: 'About Us', href: '/about' },
-      { label: 'Leadership', href: '/about#leadership' },
-      { label: 'Careers', href: '/about#careers' },
-      { label: 'Newsroom', href: '/insights' },
+      { label: 'Our Mission', href: '/about' },
+      { label: 'Insights', href: '/insights' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
   {
     heading: 'Resources',
     links: [
-      { label: 'Insights', href: '/insights' },
+      { label: 'All Services', href: '/services' },
       { label: 'Case Studies', href: '/insights' },
-      { label: 'Events', href: '/about' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'News & Insights', href: '/insights' },
+      { label: 'Get in Touch', href: '/contact' },
     ],
   },
   {
@@ -55,8 +55,8 @@ export default function Footer() {
               <Image src="/logo.svg" alt="Bireca" width={120} height={30} />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Transform. Innovate. Grow.<br />
-              Building the future with technology and strategy.
+              Turning data into decisions.<br />
+              Intelligence that drives results.
             </p>
           </div>
 

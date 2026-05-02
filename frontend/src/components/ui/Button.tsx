@@ -32,7 +32,7 @@ export default function Button({
   className,
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide uppercase transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed'
+    'inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide uppercase transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-full'
 
   const classes = clsx(base, variants[variant], className)
 

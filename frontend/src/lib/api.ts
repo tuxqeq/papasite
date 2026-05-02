@@ -2,8 +2,10 @@ import type { Service, Insight, ContactFormPayload, ApiResponse } from '@/types'
 
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
 
-export async function fetchServices(): Promise<Service[]> {
-  const res = await fetch(`${BASE}/api/services`, { next: { revalidate: 3600 } })
+export async function fetchServices(limit?: number): Promise<Service[]> {
+  const url = new URL(`${BASE}/api/services`)
+  if (limit) url.searchParams.set('limit', String(limit))
+  const res = await fetch(url.toString(), { next: { revalidate: 3600 } })
   if (!res.ok) throw new Error('Failed to fetch services')
   const json: ApiResponse<Service[]> = await res.json()
   return json.data

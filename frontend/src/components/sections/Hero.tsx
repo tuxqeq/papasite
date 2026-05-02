@@ -7,19 +7,24 @@ import Button from '@/components/ui/Button'
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-gray-dark via-black to-black" />
+      {/* Deep purple gradient base */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1e0042] via-[#08000f] to-black" />
 
-      {/* Decorative purple glow */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-purple/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-brand-purple/10 rounded-full blur-[80px] pointer-events-none" />
+      {/* Large primary glow — top right */}
+      <div className="absolute -top-32 -right-32 w-[700px] h-[700px] bg-brand-purple/30 rounded-full blur-[180px] pointer-events-none" />
+
+      {/* Secondary glow — center left */}
+      <div className="absolute top-1/2 -left-20 w-[500px] h-[500px] bg-brand-purple/20 rounded-full blur-[140px] pointer-events-none" />
+
+      {/* Accent glow — bottom right */}
+      <div className="absolute bottom-0 right-1/4 w-[350px] h-[350px] bg-purple-400/15 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Grid pattern overlay */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+            'linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -46,13 +51,15 @@ export default function Hero() {
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             style={{ originX: 0 }}
-            className="w-20 h-1 bg-brand-purple mb-8"
+            className="w-20 h-1 bg-gradient-to-r from-brand-purple to-brand-purple-light mb-8 rounded-full"
           />
 
           {/* Headline */}
           <h1 className="text-6xl lg:text-8xl xl:text-9xl font-black uppercase leading-none text-white mb-8 max-w-5xl">
             Transform.{' '}
-            <span className="text-brand-purple">Innovate.</span>{' '}
+            <span className="bg-gradient-to-r from-brand-purple to-brand-purple-light bg-clip-text text-transparent">
+              Innovate.
+            </span>{' '}
             Grow.
           </h1>
 
@@ -77,25 +84,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Stats strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="mt-24 grid grid-cols-2 lg:grid-cols-4 gap-8 border-t border-brand-gray-mid pt-10"
-        >
-          {[
-            { value: '500+', label: 'Clients Served' },
-            { value: '40', label: 'Countries' },
-            { value: '98%', label: 'Client Retention' },
-            { value: '15 yrs', label: 'Of Experience' },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-4xl font-black text-white">{stat.value}</p>
-              <p className="text-gray-500 text-sm uppercase tracking-widest mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}

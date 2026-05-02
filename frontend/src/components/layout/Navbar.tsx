@@ -3,18 +3,20 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { clsx } from 'clsx'
 
 const links = [
+  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Insights', href: '/insights' },
   { label: 'About', href: '/about' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 10)
@@ -38,22 +40,34 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 uppercase tracking-wide"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) => {
+              const active = pathname === l.href
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className={clsx(
+                    'relative pb-3 text-sm font-medium uppercase tracking-wide transition-colors duration-300',
+                    active ? 'text-brand-purple' : 'text-gray-300 hover:text-white'
+                  )}
+                >
+                  {l.label}
+                  <span
+                    className={clsx(
+                      'absolute left-0 -bottom-0.5 h-[3px] w-full rounded-full bg-brand-purple transition-transform duration-300 ease-in-out origin-center',
+                      active ? 'scale-x-100' : 'scale-x-0'
+                    )}
+                  />
+                </Link>
+              )
+            })}
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
-              className="bg-brand-purple hover:bg-brand-purple-dark text-white px-6 py-2.5 text-sm font-semibold uppercase tracking-wide transition-colors duration-200"
+              className="bg-brand-purple hover:bg-brand-purple-dark text-white px-6 py-2.5 text-sm font-semibold uppercase tracking-wide transition-colors duration-200 rounded-full"
             >
               Contact Us
             </Link>
@@ -77,20 +91,32 @@ export default function Navbar() {
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
       >
-        {links.map((l) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            onClick={() => setOpen(false)}
-            className="text-3xl font-black uppercase text-white hover:text-brand-purple transition-colors duration-200"
-          >
-            {l.label}
-          </Link>
-        ))}
+        {links.map((l) => {
+          const active = pathname === l.href
+          return (
+            <Link
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className={clsx(
+                'relative pb-3 text-3xl font-black uppercase transition-colors duration-300',
+                active ? 'text-brand-purple' : 'text-white hover:text-brand-purple'
+              )}
+            >
+              {l.label}
+              <span
+                className={clsx(
+                  'absolute left-0 -bottom-0.5 h-[3px] w-full rounded-full bg-brand-purple transition-transform duration-300 ease-in-out origin-center',
+                  active ? 'scale-x-100' : 'scale-x-0'
+                )}
+              />
+            </Link>
+          )
+        })}
         <Link
           href="/contact"
           onClick={() => setOpen(false)}
-          className="mt-4 bg-brand-purple hover:bg-brand-purple-dark text-white px-8 py-4 text-lg font-semibold uppercase tracking-wide transition-colors duration-200"
+          className="mt-4 bg-brand-purple hover:bg-brand-purple-dark text-white px-8 py-4 text-lg font-semibold uppercase tracking-wide transition-colors duration-200 rounded-full"
         >
           Contact Us
         </Link>

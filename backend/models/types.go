@@ -6,6 +6,7 @@ type Service struct {
 	Title       string   `json:"title"`
 	Description string   `json:"description"`
 	Icon        string   `json:"icon"`
+	ImageURL    string   `json:"imageUrl"`
 	Features    []string `json:"features"`
 }
 

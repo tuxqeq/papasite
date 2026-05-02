@@ -4,7 +4,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import Button from '@/components/ui/Button'
 
 export default async function ServicesGrid() {
-  const services = await fetchServices()
+  const services = await fetchServices(4)
 
   return (
     <section id="services" className="bg-brand-gray-dark py-24">
@@ -21,8 +21,7 @@ export default async function ServicesGrid() {
           </Button>
         </div>
 
-        {/* Grid with gap-px separator trick */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-gray-mid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
