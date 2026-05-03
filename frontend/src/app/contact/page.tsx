@@ -225,13 +225,13 @@ export default function ContactPage() {
             <p className="text-brand-purple text-xs font-bold uppercase tracking-widest mb-4">Contact</p>
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:hello@bireca.com"
+                href="mailto:notifications.bireca@gmail.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors duration-200 group"
               >
                 <div className="w-9 h-9 rounded-xl bg-brand-purple/10 border border-brand-purple/20 flex items-center justify-center shrink-0 group-hover:bg-brand-purple/20 transition-colors duration-200">
                   <Mail className="w-4 h-4 text-brand-purple" />
                 </div>
-                hello@bireca.com
+                notifications.bireca@gmail.com
               </a>
               <a
                 href="tel:+48571848216"

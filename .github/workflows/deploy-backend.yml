@@ -17,10 +17,11 @@ jobs:
         with:
           go-version: '1.24'
 
+      - name: Run tests
+        run: cd backend && go test ./...
+
       - name: Build binary
-        run: |
-          cd backend
-          CGO_ENABLED=0 GOOS=linux go build -o server ./...
+        run: cd backend && CGO_ENABLED=0 GOOS=linux go build -o server .
 
       - name: Copy binary to EC2
         uses: appleboy/scp-action@v0.1.7
