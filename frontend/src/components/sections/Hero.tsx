@@ -76,7 +76,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button href="/services" variant="primary" className="text-base px-8 py-4">
-              Explore Services
+              What We Do
             </Button>
             <Button href="/about" variant="outline" className="text-base px-8 py-4">
               Who We Are
