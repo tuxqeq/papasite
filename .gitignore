@@ -5,9 +5,14 @@ frontend/.env.local
 
 # Go
 backend/bin/
+backend/.env
 
 # OS
 .DS_Store
 Thumbs.db
 BizagiModelerSetup_3.6.0044.exe
 *.exe
+bireca-first-key.pem
+backend/bireca
+
+.design/

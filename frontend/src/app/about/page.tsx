@@ -54,7 +54,7 @@ export default function AboutPage() {
           <p className="text-brand-purple text-xs font-bold uppercase tracking-[0.3em] mb-6">Who We Are</p>
           <div className="w-20 h-1 bg-gradient-to-r from-brand-purple to-brand-purple-light rounded-full mb-10" />
 
-          <h1 className="text-6xl lg:text-8xl xl:text-9xl font-black uppercase leading-none text-white mb-8">
+          <h1 className="text-[7vw] sm:text-6xl lg:text-8xl xl:text-9xl font-black uppercase leading-[1.1] text-white mb-8">
             Built for<br />
             <span className="bg-gradient-to-r from-brand-purple to-brand-purple-light bg-clip-text text-transparent">
               Transformation

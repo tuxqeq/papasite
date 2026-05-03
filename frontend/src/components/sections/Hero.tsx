@@ -40,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-brand-purple text-xs font-bold uppercase tracking-[0.3em] mb-6"
+            className="text-brand-purple text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.3em] mb-6"
           >
             Digital Transformation Consultancy
           </motion.p>
@@ -55,7 +55,7 @@ export default function Hero() {
           />
 
           {/* Headline */}
-          <h1 className="text-6xl lg:text-8xl xl:text-9xl font-black uppercase leading-none text-white mb-8 max-w-5xl">
+          <h1 className="text-[2.5rem] sm:text-6xl lg:text-8xl xl:text-9xl font-black uppercase leading-[1.05] text-white mb-8 max-w-5xl">
             Transform.{' '}
             <span className="bg-gradient-to-r from-brand-purple to-brand-purple-light bg-clip-text text-transparent">
               Innovate.
@@ -63,7 +63,7 @@ export default function Hero() {
             Grow.
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed">
             We partner with the world&apos;s most ambitious organisations to navigate complexity,
             accelerate innovation, and achieve sustainable competitive advantage.
           </p>

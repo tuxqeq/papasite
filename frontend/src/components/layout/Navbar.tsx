@@ -9,8 +9,8 @@ import { clsx } from 'clsx'
 
 const links = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'About', href: '/about' },
+  { label: 'What We Do', href: '/services' },
+  { label: 'Who We Are', href: '/about' },
 ]
 
 export default function Navbar() {
